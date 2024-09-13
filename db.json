@@ -1,0 +1,159 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "김철수",
+      "email": "chulsoo@example.com",
+      "password": "hashed_password_1",
+      "phone": "010-1234-5678",
+      "address": "서울특별시 강남구 테헤란로 123",
+      "profileImage": "https://example.com/profiles/user1.jpg"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "김밥천국",
+      "category": "한식",
+      "address": "서울특별시 송파구 올림픽로 212",
+      "openingHours": "09:00 - 21:00",
+      "rating": 4.5,
+      "images": [
+        "https://example.com/restaurants/kimbap_1.jpg",
+        "https://example.com/restaurants/kimbap_2.jpg"
+      ],
+      "deliveryTime": "30분",
+      "deliveryFee": 3000
+    },
+    {
+      "id": 2,
+      "name": "짬뽕지존",
+      "category": "중식",
+      "address": "서울특별시 마포구 양화로 88",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4.7,
+      "images": [
+        "https://example.com/restaurants/chinese_1.jpg",
+        "https://example.com/restaurants/chinese_2.jpg"
+      ],
+      "deliveryTime": "40분",
+      "deliveryFee": 4000
+    }
+  ],
+  "menuItems": [
+    {
+      "id": 1,
+      "restaurantId": 1,
+      "name": "김밥",
+      "description": "신선한 야채와 밥으로 만든 전통 김밥.",
+      "price": 3000,
+      "images": [
+        "https://example.com/menu/kimbap_1.jpg",
+        "https://example.com/menu/kimbap_2.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": 2,
+      "restaurantId": 1,
+      "name": "라면",
+      "description": "매콤한 국물과 쫄깃한 면발의 라면.",
+      "price": 4000,
+      "images": [
+        "https://example.com/menu/ramen_1.jpg",
+        "https://example.com/menu/ramen_2.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": 3,
+      "restaurantId": 2,
+      "name": "짬뽕",
+      "description": "해산물이 가득 들어간 매운 짬뽕.",
+      "price": 8000,
+      "images": [
+        "https://example.com/menu/jjamppong_1.jpg",
+        "https://example.com/menu/jjamppong_2.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": 4,
+      "restaurantId": 2,
+      "name": "짜장면",
+      "description": "고소하고 달콤한 짜장면.",
+      "price": 6000,
+      "images": [
+        "https://example.com/menu/jjajang_1.jpg",
+        "https://example.com/menu/jjajang_2.jpg"
+      ],
+      "available": true
+    }
+  ],
+  "coupons": [
+    {
+      "id": 1,
+      "restaurantId": 1,
+      "title": "10% 할인 쿠폰",
+      "description": "김밥천국에서 사용 가능한 10% 할인 쿠폰입니다.",
+      "type": "discount",
+      "discountPercentage": 10,
+      "minimumOrderAmount": 0,
+      "expiryDate": "2024-12-31"
+    },
+    {
+      "id": 2,
+      "restaurantId": 1,
+      "title": "무료 배달 쿠폰",
+      "description": "3만원 이상 주문 시 배달비 무료!",
+      "type": "deliveryFee",
+      "discountPercentage": 0,
+      "minimumOrderAmount": 30000,
+      "expiryDate": "2024-11-30"
+    },
+    {
+      "id": 3,
+      "restaurantId": 2,
+      "title": "20% 할인 쿠폰",
+      "description": "짬뽕지존에서 모든 메뉴 20% 할인.",
+      "type": "discount",
+      "discountPercentage": 20,
+      "minimumOrderAmount": 0,
+      "expiryDate": "2024-10-15"
+    },
+    {
+      "id": 4,
+      "restaurantId": 2,
+      "title": "5,000원 할인 쿠폰",
+      "description": "짬뽕지존에서 5,000원 할인을 받을 수 있는 쿠폰입니다.",
+      "type": "fixedAmount",
+      "discountAmount": 5000,
+      "minimumOrderAmount": 0,
+      "expiryDate": "2024-10-31"
+    }
+  ],
+  "orders": [
+    {
+      "restaurantId": 1,
+      "orderItems": [
+        {
+          "menuId": 1,
+          "quantity": 4
+        }
+      ],
+      "couponId": 0,
+      "id": 1
+    },
+    {
+      "restaurantId": 1,
+      "orderItems": [
+        {
+          "menuId": 1,
+          "quantity": 5
+        }
+      ],
+      "couponId": "1",
+      "id": 2
+    }
+  ]
+}
